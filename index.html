@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajanish Kumar - Senior Full Stack Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            color: var(--dark-text);
+        }
+        
+        h1, h2 {
+            color: var(--primary);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 25px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact-bar {
+            background: var(--light-bg);
+            padding: 12px;
+            border-radius: 5px;
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .job {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+        }
+        
+        .company {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .date {
+            color: var(--light-text);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: var(--light-bg);
+            padding: 12px;
+            border-radius: 5px;
+        }
+        
+        .skill-category h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-item:before {
+            content: "•";
+            color: var(--secondary);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+        }
+        
+        .project-link {
+            color: var(--secondary);
+            word-break: break-all;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .download-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" id="downloadPdf">Download CV as PDF</button>
+
+    <div id="resume-content">
+        <h1>RAJANISH KUMAR</h1>
+        <h3>Senior Full Stack Developer</h3>
+        
+        <div class="contact-bar">
+            <div class="contact-item">📞 +91 7700872867</div>
+            <div class="contact-item">📍 Sadarpur, Siwan, India</div>
+            <div class="contact-item">✉️ rajanishkrm49@gmail.com</div>
+            <div class="contact-item">🌐 <a href="https://bihardiwash.vercel.app" style="color: var(--secondary);">Portfolio</a></div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>Innovative Full Stack Developer with 1+ years of experience building scalable web applications and microservices. Expertise in <span class="highlight">JavaScript ecosystems (Node.js, React)</span> and <span class="highlight">Java Spring Boot</span>. Proven ability to design and implement <span class="highlight">high-performance RESTful APIs</span> and <span class="highlight">interactive user interfaces</span>. Strong advocate for <span class="highlight">clean code architecture</span> and <span class="highlight">agile development methodologies</span>.</p>
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">HTML5 & CSS3</li>
+                        <li class="skill-item">JavaScript (ES6+)</li>
+                        <li class="skill-item">React.js</li>
+                        <li class="skill-item">Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Node.js & Express</li>
+                        <li class="skill-item">Java Spring Boot</li>
+                        <li class="skill-item">PHP & WordPress</li>
+                        <li class="skill-item">RESTful API Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">MySQL</li>
+                        <li class="skill-item">MongoDB</li>
+                        <li class="skill-item">Mongoose ORM</li>
+                        <li class="skill-item">Database Optimization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Methods</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Git Version Control</li>
+                        <li class="skill-item">Agile Development</li>
+                        <li class="skill-item">Deno Runtime</li>
+                        <li class="skill-item">Performance Tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Full Stack WordPress Developer</span> | 
+                        <span class="company">Infotechnguide</span>
+                    </div>
+                    <div class="date">2024 - Present</div>
+                </div>
+                <ul>
+                    <li>Architected <span class="highlight">custom WordPress solutions</span> serving 10,000+ monthly visitors with 99.9% uptime</li>
+                    <li>Developed <span class="highlight">performance-optimized themes</span> improving page load speed by 40% through code splitting and lazy loading</li>
+                    <li>Engineered <span class="highlight">secure admin dashboards</span> with role-based access control and audit logging</li>
+                    <li>Integrated <span class="highlight">third-party APIs</span> (Payment gateways, SMTP services) with custom PHP middleware</li>
+                    <li>Mentored junior developers in <span class="highlight">WordPress best practices</span> and modern JavaScript techniques</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Backend Developer</span> | 
+                        <span class="company">Infosys</span>
+                    </div>
+                    <div class="date">Oct 2021 - Nov 2021</div>
+                </div>
+                <ul>
+                    <li>Designed <span class="highlight">data visualization system</span> processing  records daily with PHP/MySQL</li>
+                    <li>Implemented <span class="highlight">RESTful APIs</span> reducing client-side processing time by 60% through efficient data structuring</li>
+                    <li>Optimized <span class="highlight">SQL queries</span>, decreasing average response time from 1200ms to 300ms</li>
+                    <li>Collaborated in <span class="highlight">Agile team</span> to deliver features</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL PROJECTS</h2>
+            
+            <div class="project">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Bihar Diwas Celebration Platform</span>
+                    </div>
+                    <a href="https://bihardiwash.vercel.app" class="project-link">bihardiwash.vercel.app</a>
+                </div>
+                <ul>
+                    <li>Developed <span class="highlight">AI-enhanced event portal</span> with real-time updates and   users interact</li>
+                    <li>Built <span class="highlight">Node.js API</span> handling 15,000 requests/day with 200ms average response time</li>
+                    <li>Implemented <span class="highlight">interactive UI components</span> with html,css,js, improving user engagement by 35%</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Deno-Powered RESTful API</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Created <span class="highlight">high-performance API</span> using Deno, Oak, and MongoDB</li>
+                    <li>Implemented <span class="highlight">JWT authentication</span> with role-based permissions</li>
+                    <li>Designed <span class="highlight">rate-limiting system</span> preventing API abuse while maintaining 99.5% availability</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="company">ZA Islamiya College of Technology & Management</span>
+                    </div>
+                    <div class="date">2022 - 2025</div>
+                </div>
+                <div>Bachelor of Computer Applications (BCA)</div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="company">Mukul Private ITI, Mirganj</span>
+                    </div>
+                    <div class="date">2019 - 2021</div>
+                </div>
+                <div>Industrial Training Institute (ITI) - Information Technology</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>ACHIEVEMENTS</h2>
+            <ul>
+                <li><span class="highlight">Student of the Year 2023</span> - Recognized for academic excellence and technical projects</li>
+                <li>Solving problem in hackerrank to given 5 star </li>
+                <li>LeetCode Problem Solve like array,linkedlist,stack,queue,tree etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            const element = document.getElementById('resume-content');
+            const opt = {
+                margin: 4,
+                filename: 'Rajanish_Kumar_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+</html>
